@@ -83,10 +83,6 @@ const ProjectCard = ({
           
           <div className="flex items-center justify-between">
             <div>
-              <span className="text-sm text-muted-foreground">Starting from</span>
-              <p className="text-xl font-bold text-primary">
-                ${startingPrice.toLocaleString()}
-              </p>
             </div>
           </div>
         </div>
@@ -95,7 +91,7 @@ const ProjectCard = ({
       <CardFooter className="p-6 pt-0">
         <Button asChild className="w-full">
           <Link to={`/project/${id}`}>
-            View Details
+           عرض التفاصيل
           </Link>
         </Button>
       </CardFooter>

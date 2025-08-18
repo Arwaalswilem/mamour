@@ -7,25 +7,28 @@ import Index from "./pages/Index";
 import ProjectDetails from "./pages/ProjectDetails";
 import Favorites from "./pages/Favorites";
 import NotFound from "./pages/NotFound";
+import LoginPage from "@/pages/Login";
+import RequireAuth from "@/components/RequireAuth";
+
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/project/:id" element={<ProjectDetails />} />
-          <Route path="/favorites" element={<Favorites />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
-
-export default App;
+export default function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/project/:id" element={<ProjectDetails />} />
+            <Route path="/favorites" element={<Favorites />} />
+<Route path="/login" element={<LoginPage />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+}

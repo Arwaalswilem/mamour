@@ -4,6 +4,8 @@ import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
 import { useFavorites } from "@/hooks/useFavorites";
 import { Button } from "@/components/ui/button";
+import Hero from "@/assets/hero.png";
+
 import { SlidersHorizontal, Grid, List } from "lucide-react";
 import {
   DropdownMenu,
@@ -41,27 +43,40 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="bg-gradient-hero py-16 px-4">
-        <div className="container mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Find Your Dream Home
-          </h1>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Discover premium residential projects with modern amenities and exceptional designs
-          </p>
-          <Button variant="hero" size="hero" className="shadow-glow">
-            Explore Projects
-          </Button>
-        </div>
-      </section>
+<section className="relative h-[220px] md:h-[350px]">
+  {/* الخلفية */}
+  <img
+    src={Hero}
+    alt="Nhc"
+    className="absolute inset-0 w-full h-full object-cover"
+  />
+  <div className="absolute inset-0 bg-black/40">
+  </div>
+
+<div className="relative container mx-auto text-center text-white flex flex-col items-center justify-end h-full pb-8">
+  <p className="text-xl text-white/90 mb-1 text-base"
+  style={{ fontSize: "medium" }}>
+معمور منصة لعرض مشاريع الشركة الوطنية للإسكان 
+  </p>
+  <p className="text-xl text-white/90 mb-4 max-w-xl"
+  style={{ fontSize: "medium" }}>
+    وإبراز إنجازات وبرامج ومشاريع وزارة الشؤون البلدية والقروية والإسكان، عبر واجهة تفاعلية تمكّن الزوار من الاطلاع بسهولة على أحدث المشاريع والمبادرات في القطاع العقاري.
+  </p>
+
+</div>
+
+</section>
+
+
+
+
 
       {/* Filters and Controls */}
       <section className="py-8 px-4 border-b border-border/40">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <h2 className="text-2xl font-semibold text-foreground">
-              Featured Projects ({filteredAndSortedProjects.length})
+              المشاريع المميزة ({filteredAndSortedProjects.length})
             </h2>
             
             <div className="flex items-center gap-3">
@@ -70,7 +85,7 @@ const Index = () => {
                 <DropdownMenuTrigger asChild>
                   <Button variant="outline" className="gap-2">
                     <SlidersHorizontal className="h-4 w-4" />
-                    {filterType === "all" ? "All Types" : filterType}
+                    {filterType === "all" ? "كل الأنواع" : filterType}
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
@@ -86,7 +101,7 @@ const Index = () => {
               </DropdownMenu>
 
               {/* Sort Options */}
-              <DropdownMenu>
+              {/* <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="outline">
                     Sort: {sortBy === "price-low" ? "Price Low-High" : 
@@ -94,7 +109,7 @@ const Index = () => {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
-                  <DropdownMenuItem onClick={() => setSortBy("name")}>
+                  <DropdownMenuItem onClick={() => setSortBy("الاسم")}>
                     Name
                   </DropdownMenuItem>
                   <DropdownMenuItem onClick={() => setSortBy("price-low")}>
@@ -104,7 +119,7 @@ const Index = () => {
                     Price: High to Low
                   </DropdownMenuItem>
                 </DropdownMenuContent>
-              </DropdownMenu>
+              </DropdownMenu> */}
 
               {/* View Mode Toggle */}
               <div className="flex border border-border rounded-lg">
@@ -156,12 +171,31 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-primary text-primary-foreground py-8 px-4 mt-16">
+  <footer className="bg-primary text-primary-foreground py-8 px-4 mt-16">
         <div className="container mx-auto text-center">
           <p className="text-lg">
-            Created by <span className="font-semibold">Your Name</span> • My Programming
+            Created by <span className="font-semibold">Arwa Alswilem</span> -Frontend Developer
           </p>
+      
+    <div className="flex justify-center gap-6 text-sm">
+  <a
+  href="https://ruh-s3.bluvalt.com/nhcsa/uploads/NHC-Portfolio-V4-20250123.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hover:underline"
+>
+ About NHC
+</a>
+  <a
+  href="https://www.linkedin.com/in/arwa-alswilem-5299982a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hover:underline"
+>
+  My linkedin
+</a>
+    
+    </div>
         </div>
       </footer>
     </div>
