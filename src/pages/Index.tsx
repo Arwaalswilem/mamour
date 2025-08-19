@@ -16,7 +16,7 @@ import {
 
 const Index = () => {
   const { toggleFavorite, isFavorite } = useFavorites();
-  const [sortBy, setSortBy] = useState<"price-low" | "price-high" | "name">("name");
+  const [sortBy, setSortBy] = useState<"سعر-أقل" | "سعر-أعلى" | "الاسم">("الاسم");
   const [filterType, setFilterType] = useState<string>("all");
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
 
@@ -28,11 +28,11 @@ const Index = () => {
     .filter(project => filterType === "all" || project.type === filterType)
     .sort((a, b) => {
       switch (sortBy) {
-        case "price-low":
+        case "سعر-أقل":
           return a.startingPrice - b.startingPrice;
-        case "price-high":
+        case "سعر-أعلى":
           return b.startingPrice - a.startingPrice;
-        case "name":
+        case "الاسم":
           return a.title.localeCompare(b.title);
         default:
           return 0;
@@ -40,7 +40,7 @@ const Index = () => {
     });
 
   return (
-    <div className="min-h-screen bg-background">
+    <div dir="rtl" className="min-h-screen bg-background text-right">
       <Navbar />
       
 <section className="relative h-[220px] md:h-[350px]">
@@ -53,7 +53,7 @@ const Index = () => {
   <div className="absolute inset-0 bg-black/40">
   </div>
 
-<div className="relative container mx-auto text-center text-white flex flex-col items-center justify-end h-full pb-8">
+<div className="relative container mx-auto text-white flex flex-col items-end justify-end h-full pb-8">
   <p className="text-xl text-white/90 mb-1 text-base"
   style={{ fontSize: "medium" }}>
 معمور منصة لعرض مشاريع الشركة الوطنية للإسكان 

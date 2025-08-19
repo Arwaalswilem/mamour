@@ -34,7 +34,7 @@ function UnitCardItem({ unit }: { unit: any }) {
   const prev = () => setCurrent((p) => (p - 1 + images.length) % images.length);
 
   return (
-    <Card key={unit.id} className="hover:shadow-card transition-shadow">
+    <Card key={unit.id} className="hover:shadow-card transition-shadow" dir="rtl">
       <CardContent className="p-6">
         {/* Image Slider */}
 <div className="relative w-full aspect-[4/3] mb-4 overflow-hidden rounded-lg bg-muted">
@@ -88,22 +88,25 @@ function UnitCardItem({ unit }: { unit: any }) {
         </div>
 
         {/* Card body */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div 
+  dir="rtl" 
+  className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-right"
+>
           <div className="flex-1">
             <h3 className="text-xl font-semibold mb-2">{unit.name}</h3>
 
-            <div className="flex items-center gap-6 text-muted-foreground mb-3">
+    <div className="flex items-center gap-6 text-muted-foreground mb-3 justify-end">
               <div className="flex items-center gap-1">
                 <Bed className="h-4 w-4" />
-                <span>{unit.bedrooms === 0 ? "Studio" : `${unit.bedrooms} BR`}</span>
+                <span>{unit.bedrooms === 0 ? "استديو" : `${unit.bedrooms} دورة مياة`}</span>
               </div>
               <div className="flex items-center gap-1">
                 <Bath className="h-4 w-4" />
-                <span>{unit.bathrooms} BA</span>
+                <span>{unit.bathrooms} غرفة نوم</span>
               </div>
               <div className="flex items-center gap-1">
                 <Square className="h-4 w-4" />
-                <span>{unit.area} sq ft</span>
+                <span>{unit.area} {`100 م\u00B2`}</span>
               </div>
             </div>
 
@@ -141,13 +144,13 @@ function UnitCardItem({ unit }: { unit: any }) {
           </div>
 
           <div className="text-right">
-            <p className="text-2xl font-bold text-primary flex items-center justify-end gap-1">
+            <p className="text-2xl font-bold text-primary flex-row-reverse flex items-end justify-end gap-1">
               <img src={RiyalIcon} alt="ريال" className="w-5 h-5" />
               {unit.price.toLocaleString()}
             </p>
-            <p className="text-sm text-muted-foreground flex items-center gap-1">
+            <p className="text-sm text-muted-foreground flex-row-reverse flex items-end gap-1">
               <img src={RiyalIcon} alt="ريال" className="w-4 h-4" />
-              {Math.round(unit.price / unit.area).toLocaleString()}/sq ft
+              {Math.round(unit.price / unit.area).toLocaleString()}/{`100 م\u00B2`}
             </p>
           </div>
         </div>
@@ -193,7 +196,7 @@ const ProjectDetails = () => {
   });
 
   return (
-    <div className="min-h-screen bg-background">
+    <div dir="rtl" className="min-h-screen bg-background text-right">
       <Navbar />
 
       {/* Header with Back Button */}
@@ -277,21 +280,21 @@ const ProjectDetails = () => {
                       // no-op to keep shadcn dropdown import if you decide to switch back
                     }}
                   >
-                    <SlidersHorizontal className="h-4 w-4" />
-                    Sort: {sortUnitsBy === "price-low"
-                      ? "Price Low-High"
-                      : sortUnitsBy === "price-high"
-                      ? "Price High-Low"
-                      : "Size"}
-                  </Button>
-                </div>
-              </div>
+              <SlidersHorizontal className="h-4 w-4" />
+ترتيب حسب: {sortUnitsBy === "price-low"
+  ? "السعر: من الأقل إلى الأعلى"
+  : sortUnitsBy === "price-high"
+  ? "السعر: من الأعلى إلى الأقل"
+  : "المساحة"}
+</Button>
+</div>
+</div>
 
               {/* Simple sort buttons (you can revert to DropdownMenu if you prefer) */}
               <div className="flex flex-wrap gap-2 mb-4">
-                <Button variant={sortUnitsBy === "price-low" ? "default" : "outline"} onClick={() => setSortUnitsBy("price-low")}>Low → High</Button>
-                <Button variant={sortUnitsBy === "price-high" ? "default" : "outline"} onClick={() => setSortUnitsBy("price-high")}>High → Low</Button>
-                <Button variant={sortUnitsBy === "size" ? "default" : "outline"} onClick={() => setSortUnitsBy("size")}>By Size</Button>
+                <Button variant={sortUnitsBy === "price-low" ? "default" : "outline"} onClick={() => setSortUnitsBy("price-low")}>الأقل → الأعلى</Button>
+                <Button variant={sortUnitsBy === "price-high" ? "default" : "outline"} onClick={() => setSortUnitsBy("price-high")}>الأعلى → الأقل</Button>
+                <Button variant={sortUnitsBy === "size" ? "default" : "outline"} onClick={() => setSortUnitsBy("size")}>المساحة</Button>
               </div>
 
               <div className="grid gap-6">

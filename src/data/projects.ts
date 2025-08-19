@@ -93,7 +93,7 @@ export const projects: Project[] = [
           images: [sarayaaa, sarayaa, saraya],
         area: 450,
         price: 1300000,
-        features: ["Open Plan", "Balcony", "Modern Kitchen", "Smart Home System"],
+        features: ["مخطط مفتوح", "شرفة", "مطبخ عصري", "نظام المنزل الذكي"],
         link: "https://sakani.sa/app/offplan-projects/1012",
                brochureLink:"https://ruh-s3.bluvalt.com/api-nhc.sa/s3fs-public/2024-11/12.11%20Rejan%20-%20Brochure-2-compressed.pdf",
 
@@ -108,7 +108,7 @@ export const projects: Project[] = [
                   images: [narjes, narjess, narjesss],
         area: 650,
         price: 1500000,
-        features: ["Separate Bedroom", "Balcony", "Walk-in Closet", "Premium Finishes"],
+        features:["غرفة نوم مستقلة", "شرفة", "خزانة ملابس واسعة", "تشطيبات فاخرة"],
         link: "https://nhc.sa/real-estate-development/projects/324/",
                brochureLink:"https://ruh-s3.bluvalt.com/api-nhc.sa/s3fs-public/2021-08/%D8%A8%D8%B1%D8%B4%D9%88%D8%B1%20-%20%D8%A7%D9%84%D9%86%D8%B1%D8%AC%D8%B3%20%D9%81%D9%8A%D9%88.pdf",
 
@@ -123,7 +123,7 @@ export const projects: Project[] = [
 
         area: 850,
         price: 2000000,
-        features: ["Master Suite", "Guest Bedroom", "Two Balconies", "Storage Room"],
+        features: ["جناح رئيسي", "غرفة نوم للضيوف", "شرفتان", "غرفة تخزين"],
         link: "https://shrakat.housing.sa/ar/partners/212/533",
                        brochureLink:"https://ruh-s3.bluvalt.com/api-nhc.sa/s3fs-public/2021-08/%D8%A8%D8%B1%D9%88%D8%B4%D9%88%D8%B1%20%D8%A5%D8%B4%D8%B1%D8%A7%D9%82%20%D9%84%D9%8A%D9%81%D9%8A%D9%86%D8%AC.pdf",
 
@@ -138,7 +138,7 @@ export const projects: Project[] = [
 
         area: 1200,
         price: 1200000,
-        features: ["Private Terrace", "Panoramic Views", "Premium Kitchen", "Wine Cellar"],
+        features: ["تراس خاص", "إطلالات بانورامية", "مطبخ فاخر"],
         link: "https://sakani.sa/app/offplan-projects/1433",
                        brochureLink:"https://ruh-s3.bluvalt.com/api-nhc.sa/s3fs-public/2021-08/%D8%A8%D8%B1%D8%B4%D9%88%D8%B1%20-%20%D8%B3%D8%B1%D8%A7%D9%8A%D8%A7%20%D8%A7%D9%84%D8%AC%D9%88%D8%A7%D9%86.pdf",
 
@@ -176,7 +176,7 @@ export const projects: Project[] = [
 
         area: 2200,
         price: 850000,
-        features: ["Private Garden", "Garage", "Maid's Room", "BBQ Area"],
+        features: ["حديقة خاصة", "كراج", "غرفة خادمة", "منطقة شواء"],
         link: "https://sakani.sa/app/offplan-projects/1421?csrt=2655069475825020309",
                        brochureLink:"https://ruh-s3.bluvalt.com/api-nhc.sa/s3fs-public/2025-02/2212248_NHC_Ebayya_Brochure_Digi_v1_AW_SB%20%281%29.pdf"
       },
@@ -190,7 +190,7 @@ export const projects: Project[] = [
 
         area: 2800,
         price: 1150000,
-        features: ["Sea Views", "Private Pool", "Double Garage", "Guest Suite"],
+        features: ["إطلالات بحرية", "مسبح خاص", "كراج مزدوج", "جناح ضيوف"],
         link: "https://sakani.sa/app/offplan-projects/1421?csrt=2655069475825020309",
                        brochureLink:"https://ruh-s3.bluvalt.com/api-nhc.sa/s3fs-public/2024-11/2212244_NHC_Al_Fursan_Brochure_Digi_v1_AW_SB.pdf"
       },
@@ -204,7 +204,8 @@ export const projects: Project[] = [
 
         area: 3500,
         price: 1500000,
-        features: ["Panoramic Views", "Private Pool", "Home Theater", "Wine Cellar"],
+        features: ["إطلالات بانورامية", "مسبح خاص", "صالة سينما منزلية"]
+,
         link: "https://sakani.sa/app/offplan-projects/1421?csrt=2655069475825020309",
                        brochureLink:"https://ruh-s3.bluvalt.com/api-nhc.sa/s3fs-public/2024-11/2212244_NHC_Al_Fursan_Brochure_Digi_v1_AW_SB.pdf"
       },
@@ -241,7 +242,8 @@ export const projects: Project[] = [
 
         area: 520,
         price: 380000,
-        features: ["Floor-to-ceiling Windows", "Smart Home", "Balcony", "Storage"],
+        features:["نوافذ ممتدة من الأرض حتى السقف", "منزل ذكي", "شرفة", "تخزين"]
+,
         link: "https://sakani.sa/app/offplan-projects/1416",
                        brochureLink:"https://ruh-s3.bluvalt.com/api-nhc.sa/s3fs-public/2024-11/Al%20Sadan%20Brochure11%20Digital.pdf"
       },
@@ -255,7 +257,7 @@ export const projects: Project[] = [
 
         area: 720,
         price: 520000,
-        features: ["City Views", "Walk-in Closet", "Premium Kitchen", "Study Area"],
+        features: ["إطلالات على المدينة", "خزانة ملابس واسعة", "مطبخ فاخر", "منطقة دراسة"],
         link: "https://sakani.sa/app/offplan-projects/1542",
                        brochureLink:"https://ruh-s3.bluvalt.com/api-nhc.sa/s3fs-public/2025-02/NHC_RIHAB-ALSADAN-BROCHURE.pdf"
       },
