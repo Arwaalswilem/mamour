@@ -53,7 +53,7 @@ const Index = () => {
   <div className="absolute inset-0 bg-black/40">
   </div>
 
-<div className="relative container mx-auto text-white flex flex-col items-end justify-end h-full pb-8">
+<div className="relative container mx-auto text-white flex flex-col items-center justify-end h-full pb-8 text-center">
   <p className="text-xl text-white/90 mb-1 text-base"
   style={{ fontSize: "medium" }}>
 معمور منصة لعرض مشاريع الشركة الوطنية للإسكان 

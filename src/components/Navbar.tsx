@@ -47,8 +47,8 @@ const Navbar = () => {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition">
-          <img src={luluLogo} alt="NHC" className="h-8 w-auto" />
-          <img src={luluLoo} alt="Mamur" className="h-10 w-auto" />
+          <img src={luluLogo} alt="NHC" className="h-10 w-auto" />
+          <img src={luluLoo} alt="Mamur" className="h-12 w-auto" />
         </Link>
 
         {/* Search */}
